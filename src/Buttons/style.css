@@ -1,0 +1,29 @@
+@media (max-width: 600px) {
+    .buttons {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+.button {
+    font-size: 17px;
+    transition: 1s;
+    color: white;
+    border: none;
+}
+
+.button__teal {
+    background-color: transparent;
+    color: rgb(0, 115, 131);
+}
+
+.button__teal:hover {
+    background-color: transparent;
+    color: rgba(0, 116, 131, 0.500);
+}
+
+.button__teal:disabled {
+    color: rgb(119, 119, 119);
+}
