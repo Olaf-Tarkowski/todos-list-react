@@ -6,10 +6,10 @@ import Header from "./Header";
 import Container from "./Container";
 
 const tasks = [
-  { id: 1, content: "Jeeść", done: false },
-  { id: 2, content: "Jkuic kompa", done: true },
-  { id: 3, content: "Jeeść", done: false },
-  { id: 4, content: "Jeeść" },
+  { id: 1, content: "Zjeść obiad", done: false },
+  { id: 2, content: "Kupić spodnie", done: true },
+  { id: 3, content: "Odrobić lekcje", done: false },
+  { id: 4, content: "wyjść z psem na spacer" },
 ];
 
 const hideDoneTasks = false;
