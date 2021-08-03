@@ -35,6 +35,17 @@ function App() {
     }))
   };
 
+  const addNewTaskContent = (newTaskContent) => {
+    setTasks( tasks => [
+      ...tasks,
+      {
+        content: newTaskContent,
+        done:false,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+      }
+    ])
+  };
+
   return (
     <Container>
       <Header
@@ -43,13 +54,17 @@ function App() {
       <Section
         title="Dodaj nowe zadanie"
         body={
-          <Form />
+          <Form addNewTaskContent={addNewTaskContent}/>
         }
       />
       <Section
         title="Lista zadań"
         body={
-          <Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleDone={toggleDone} />
+          <Tasks
+          tasks={tasks}
+          hideDone={hideDone}
+          removeTask={removeTask}
+          toggleDone={toggleDone}/>
         }
         extraHeaderContent={
           <Buttons tasks={tasks} hideDone={hideDone} setTasksDone={setTasksDone} />
