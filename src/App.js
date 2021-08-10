@@ -5,20 +5,21 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
+import fewTasks from "./Tasks/fewTasks";
 
 function App() {
-  const hideDone = false;
+  const [hideDone, setHideDone] = useState(false);
 
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "Zjeść kolację", done: false },
-    { id: 2, content: "Kupić spodnie", done: true },
-    { id: 3, content: "Odrobić lekcje", done: false },
-    { id: 4, content: "wyjść z psem na spacer" },
-  ]);
+  const toggleHideDone = () => {
+    setHideDone(hideDone => !hideDone);
+  };
+
+  const [tasks, setTasks] = useState(fewTasks);
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id))
   };
+  
   const setTasksDone = () => {
     setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
   };
@@ -27,19 +28,19 @@ function App() {
     setTasks(tasks => tasks.map(task => {
       if (task.id === id) {
         return { ...task, done: !task.done }
-      }
+      };
       return task;
     }))
   };
 
   const addNewTaskContent = (newTaskContent) => {
-    setTasks( tasks => [
+    setTasks(tasks => [
       ...tasks,
       {
         content: newTaskContent,
-        done:false,
+        done: false,
         id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
-      }
+      },
     ])
   };
 
@@ -51,24 +52,23 @@ function App() {
       <Section
         title="Dodaj nowe zadanie"
         body={
-          <Form addNewTaskContent={addNewTaskContent}/>
+          <Form addNewTaskContent={addNewTaskContent} />
         }
       />
       <Section
         title="Lista zadań"
         body={
           <Tasks
-          tasks={tasks}
-          hideDone={hideDone}
-          removeTask={removeTask}
-          toggleDone={toggleDone}/>
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask}
+            toggleDone={toggleDone} />
         }
         extraHeaderContent={
-          <Buttons tasks={tasks} hideDone={hideDone} setTasksDone={setTasksDone} />
+          <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setTasksDone={setTasksDone} />
         }
       />
     </Container>
-
   );
 }
 
