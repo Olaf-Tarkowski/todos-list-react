@@ -4,9 +4,10 @@ import "./style.css";
 const Form = ({addNewTaskContent}) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
+        setNewTaskContent("")
         if (newTaskContent.trim() !== "") {
             return addNewTaskContent(newTaskContent)
-        }return setNewTaskContent("")
+        }
     };
     const [newTaskContent, setNewTaskContent] = useState("");
     return (
