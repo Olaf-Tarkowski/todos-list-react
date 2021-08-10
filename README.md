@@ -4,6 +4,14 @@ Description
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Demo
+[To do list in react](https://olaf-tarkowski.github.io/todos-list-react/)
+
+![list](https://user-images.githubusercontent.com/80913259/123465913-030cc280-d5ef-11eb-8200-79f4b122c8d9.gif)
+
+![list_2](https://user-images.githubusercontent.com/80913259/123466638-db6a2a00-d5ef-11eb-953e-d1413ac09a30.gif)
+
+
 ## Available Scripts
 
 In the project directory, you can run:
