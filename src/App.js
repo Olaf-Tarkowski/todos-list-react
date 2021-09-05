@@ -8,17 +8,13 @@ import Container from "./Container";
 
 
 function App() {
-  const inital = () => (
-    JSON.parse(localStorage.getItem("tasksStorage")) || []
-  );
-
   const [hideDone, setHideDone] = useState(false);
 
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
 
-  const [tasks, setTasks] = useState(inital);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasksStorage")) || []);
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id))
