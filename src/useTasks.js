@@ -11,7 +11,7 @@ export const useTasks = () => {
       setTasks(tasks => tasks.map(task => ({ ...task, done: true })))
     };
   
-    const toggleDone = (id) => {
+    const toggleTaskDone = (id) => {
       setTasks(tasks => tasks.map(task => {
         if (task.id === id) {
           return { ...task, done: !task.done }
@@ -35,6 +35,6 @@ export const useTasks = () => {
       localStorage.setItem("tasksStorage", JSON.stringify(tasks));
     }, [tasks]);
   
-    return {tasks, removeTask, setTasksDone, toggleDone, addNewTaskContent};
+    return {tasks, removeTask, setTasksDone, toggleTaskDone, addNewTaskContent};
   };
   

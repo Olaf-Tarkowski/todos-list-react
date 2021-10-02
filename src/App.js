@@ -18,7 +18,7 @@ function App() {
     tasks,
     removeTask,
     setTasksDone,
-    toggleDone,
+    toggleTaskDone,
     addNewTaskContent
   } = useTasks();
 
@@ -40,7 +40,7 @@ function App() {
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
-            toggleDone={toggleDone} />
+            toggleTaskDone={toggleTaskDone} />
         }
         extraHeaderContent={
           <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setTasksDone={setTasksDone} />
