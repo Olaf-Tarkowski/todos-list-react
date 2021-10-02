@@ -19,7 +19,7 @@ function App() {
     removeTask,
     setTasksDone,
     toggleTaskDone,
-    addNewTaskContent
+    addNewTask
   } = useTasks();
 
   return (
@@ -30,7 +30,7 @@ function App() {
       <Section
         title="Dodaj nowe zadanie"
         body={
-          <Form addNewTaskContent={addNewTaskContent} />
+          <Form addNewTask={addNewTask} />
         }
       />
       <Section

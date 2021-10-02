@@ -20,11 +20,11 @@ export const useTasks = () => {
       }))
     };
   
-    const addNewTaskContent = (newTaskContent) => {
+    const addNewTask = (newTask) => {
       setTasks(tasks => [
         ...tasks,
         {
-          content: newTaskContent,
+          content: newTask,
           done: false,
           id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
         },
@@ -35,6 +35,6 @@ export const useTasks = () => {
       localStorage.setItem("tasksStorage", JSON.stringify(tasks));
     }, [tasks]);
   
-    return {tasks, removeTask, setTasksDone, toggleTaskDone, addNewTaskContent};
+    return {tasks, removeTask, setTasksDone, toggleTaskDone, addNewTask};
   };
   
