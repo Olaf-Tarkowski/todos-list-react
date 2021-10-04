@@ -11,6 +11,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![list_2](https://user-images.githubusercontent.com/80913259/123466638-db6a2a00-d5ef-11eb-953e-d1413ac09a30.gif)
 
+## Used technology
+- HTML
+- CSS
+- Java Script with ES6 +
+- BEM
+- Immutability
+- React
+- Create-React-App
+- Webpack
+- Styled Components
+- Custom Hooks
+
 
 ## Available Scripts
 
