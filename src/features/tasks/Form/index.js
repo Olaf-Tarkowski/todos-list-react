@@ -7,10 +7,13 @@ import { addTask } from "../tasksSlice";
 
 const Form = () => {
     const { inputRef } = useFocus();
+    const dispatch = useDispatch();
+    const [newTask, setNewTaskContent] = useState("");
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         setNewTaskContent("")
+
         if (newTask.trim() !== "") {
             return dispatch(addTask({
                 content: newTask,
@@ -19,8 +22,6 @@ const Form = () => {
             }))
         }
     };
-    const dispatch = useDispatch();
-    const [newTask, setNewTaskContent] = useState("");
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
