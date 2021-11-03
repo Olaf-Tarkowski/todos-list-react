@@ -3,48 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import { configureStore } from '@reduxjs/toolkit';
-
-const oldTask = {
-  tasks: []
-}
-const redux = (store = oldTask, action) => {
-  if (action.type === "addTask") {
-    return {
-      ...store,
-      tasks: [
-        ...store.tasks,
-        { cotent: action.payload },
-      ]
-    }
-  }
-  return store;
-};
-
-const store = configureStore({ reducer: redux });
-console.log(store.getState());
-
-const addTask = content => ({
-  type: "addTask",
-  payload: content,
-});
-
-const selectTasks = state => state.tasks;
-
-store.dispatch(addTask("Nauczyć się redux'a"));
-console.log(store.getState());
-
-store.dispatch({
-  type: "addTask",
-  payload: "Jem"
-});
-console.log(selectTasks(store.getState()));
-
+import store from "./store";
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
