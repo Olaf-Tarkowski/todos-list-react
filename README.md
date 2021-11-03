@@ -22,6 +22,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Webpack
 - Styled Components
 - Custom Hooks
+- Redux
 
 
 ## Available Scripts
