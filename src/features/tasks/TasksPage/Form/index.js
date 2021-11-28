@@ -3,7 +3,7 @@ import { StyledForm, NewTasks, StyledButton } from "./styled"
 import { useFocus } from "./useFocus";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
-import { addTask } from "../tasksSlice";
+import { addTask } from "../../tasksSlice";
 
 const Form = () => {
     const { inputRef } = useFocus();
