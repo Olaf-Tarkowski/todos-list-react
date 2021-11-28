@@ -7,9 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Demo
 [To do list in react](https://olaf-tarkowski.github.io/todos-list-react/)
 
-![list](https://user-images.githubusercontent.com/80913259/123465913-030cc280-d5ef-11eb-8200-79f4b122c8d9.gif)
+![ListToDo](https://user-images.githubusercontent.com/80913259/143784142-f4022ff8-4fb1-4a54-bd4d-cebc809cdd32.gif)
 
-![list_2](https://user-images.githubusercontent.com/80913259/123466638-db6a2a00-d5ef-11eb-953e-d1413ac09a30.gif)
+![sampleTasksDownload](https://user-images.githubusercontent.com/80913259/143784169-88313283-24b2-4a54-be2d-eb499e61e5b0.gif)
 
 ## Used technology
 - HTML
