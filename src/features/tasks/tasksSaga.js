@@ -8,9 +8,8 @@ function* fetchExampleTasksHendler() {
         yield delay(1_000);
         const exampleTasls = yield call(getExampleTasks);
         yield put(setTasks(exampleTasls));
-
     }catch(error){
-        yield call(alert, "Coś nie poszło zgodnie z oczekiwaniami")
+        yield call(alert, "Coś nie poszło zgodnie z oczekiwaniami");
     }
 }
 
