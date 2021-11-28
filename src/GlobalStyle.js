@@ -1,3 +1,7 @@
+
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
 }
@@ -8,6 +12,7 @@ html {
 
 body {
   background-color: rgb(238, 237, 239);
-  margin: auto 20px;
+  margin: auto;
   font-family: 'Montserrat', sans-serif;
 }
+`;
